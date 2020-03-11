@@ -45,6 +45,12 @@ Le partage de ressources d'origine croisée (CORS) permet aux demandes AJAX d'ig
 
 Mongoose rend l'interaction avec MongoDB via Node.js plus simple.  
 
-- `npm install -g nodemon`  
+- `npm install -g nodemon`  ( si erreur utiliser `sudo`)
   
-  nodemon facilite le développement. Il s'agit d'un outil qui aide à développer des applications basées sur node.js en redémarrant automatiquement l'application de nœud lorsque des modifications de fichiers dans le répertoire sont détectées.
+  nodemon facilite le développement. Il s'agit d'un outil qui aide à développer des applications basées sur node.js en redémarrant automatiquement l'application de nœud lorsque des modifications de fichiers dans le répertoire sont détectées.  
+    
+      
+Créer le serveur principal : le fichier server.js
+créer un serveur Express, attacher cors et middleware express.json  
+  
+  Lancer le server grâce à `nodemon server`
