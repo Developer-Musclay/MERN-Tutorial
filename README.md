@@ -2,13 +2,13 @@
 
 ## Mern stack basics - Bases de la pile Mern 
 
-La pile MERN est une pile populaire de technologies permettant de créer une application moderne d'une seule page. Dans ce tutoriel, j'utilise la pile MERN en créant un tracker d'exercice.  
+La stack MERN est une pile populaire de technologies permettant de créer une application moderne *single-page application*. Dans ce tutoriel, j'utilise la pile MERN en créant un tracker d'exercice.  
 
-La pile MERN comprend les technologies suivantes:  
+La stack MERN comprend les technologies suivantes:  
 
-**MongoDB** : une base de données open source basée sur des documents. ( Non relationnelle )  
+**MongoDB** : une base de données open source ( *document-based* , Non relationnelle )  
 
-**Express** : un cadre d'application Web pour Node.js.  
+**Express** : un framework d'application Web pour Node.js.  
 
 **React** : une bibliothèque front-end JavaScript pour créer des interfaces utilisateur.  
 
@@ -64,12 +64,12 @@ Se connecter à notre base de données dans MongoDB Atlas.
   
 Pour que la connexion fonctionne, nous devons ajouter la ATLAS_URI variable d'environnement correcte.  
    
-- Créer un fichier ‘.env‘  
+- Créer un fichier `.env`  
 l'uri correspond à la chaîne de connexion de MongoDB Atlas. ( retour au tableau de bord MongoDB Atlas et copier la chaîne uri)
-collez la chaîne uri dans le fichier ‘.env‘ après avoir écrit ‘ATLAS_URI =‘  
+collez la chaîne uri dans le fichier ‘.env‘ après avoir écrit `ATLAS_URI =`  
 remplacer <password> par le mot de passe configuré plus tôt.  
   
-Si ‘«Connexion à la base de données MongoDB établie avec succès»‘ dans le terminal , l'opération est un succès.
+Si `«Connexion à la base de données MongoDB établie avec succès»` dans le terminal , l'opération est un succès.
   
 
 ### 3. Schéma de base de données  
@@ -82,15 +82,15 @@ Création des fichiers *exercise.model.js* et *user.model.js* dans un nouveau do
 
 Ajout des routes de point de terminaison API afin que le serveur puisse être utilisé pour effecutuer des opérations CRUD.  
 
-Création dossier "routes". À l'intérieur, deux fichiers *exercices.js* ad *users.js*.  
+Création dossier "routes". À l'intérieur, deux fichiers *exercices.js* et *users.js*.  
 
-Pour informer le serveur que nous allons utiliser ces fichiers,  insérer dans "server.js" : 
-‘app.listen(port, function() {‘  
-‘const exercicesRouter = require ('./ routes / exercices'); 
-const usersRouter = require ('./ routes / users'); 
+Pour informer le serveur que nous allons utiliser ces fichiers,  insérer dans "server.js" :  
 
-app.use ('/ exercices', exercicesRouter); 
-app.use ('/ users', usersRouter);‘  
+`const exercicesRouter = require ('./ routes / exercices'); 
+const usersRouter = require ('./ routes / users');`  
+
+`app.use ('/ exercices', exercicesRouter); 
+app.use ('/ users', usersRouter);`  
 
 Les deux premières lignes chargent les routeurs à partir d'autres fichiers. Ensuite, les routeurs sont ajoutés en tant que middleware.
 
@@ -103,7 +103,7 @@ Les deux premières lignes chargent les routeurs à partir d'autres fichiers. En
 
 **Insomnia** ( outil alternatif : Postman )  
 
-‘sudo snap install insomnia‘  
+`sudo snap install insomnia`  
 
 Insomnia nous permet de tester l'api du serveur comme par exemple :  
 
@@ -111,20 +111,20 @@ Insomnia nous permet de tester l'api du serveur comme par exemple :
 
 exemple de requête :  
 
-‘{
+`{
  "username": "Jerem"
-}‘  
+}`  
 
 préciser le type de requếte *GET* ou *POST*, et bien préciser l'url /!\, ici :  
 
-‘http://localhost:5000/users/add‘  
+`http://localhost:5000/users/add`  
 
 
 2) -> envoyer une *GET* request  
 
 pour récupérer une liste d'utilisateurs:  
 
-‘http://localhost:5000/users‘
+`http://localhost:5000/users`
 
 ( Body : No Body )  
 
@@ -134,24 +134,24 @@ Dernière vérification : Sur le tableau de bord **MongoDB Atlas** ( collections
 
 3) -> Ajouter des exercices *POST* ( toujours avec Insomnia ) sur :  
 
-‘http://localhost:5000/exercices/add‘  
+`http://localhost:5000/exercices/add`  
 
 un exercice :  
 
-{ 
+`{ 
 "username": "Jerem", 
 "description": "bodybuilding", 
 "duration": 90, 
 "date": "2020-03-13T14:19:15.000Z" 
-}  
+}`  
 
 puis un autre :  
 
-{
+`{
  "username": "Jerem",
  "description": "run",
  "duration": 30,
  "date": "2020-03-16T07:10:24.000Z"
-} 
+}` 
 
-Vérifier en envoyant une *GET* request à ‘http://localhost:5000/exercices‘ , et/ou sur le tableau de bord MongoDB Atlas.
+Vérifier en envoyant une *GET* request à `http://localhost:5000/exercices` , et/ou sur le tableau de bord MongoDB Atlas.
