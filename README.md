@@ -18,7 +18,7 @@ La pile MERN comprend les technologies suivantes:
 ### 1. MongoDB Atlas
 
 Il est possible d'héberger une base de données MongoDB localement, 
-mais il semblerait qu'il soit plus facile d'héberger la base de données à l'aide de MongoDB Atlas.
+mais il semblerait qu'il soit plus facile d'héberger la base de données à l'aide de **MongoDB Atlas**.
 
 - créer un compte  
 
@@ -74,7 +74,7 @@ Si ‘«Connexion à la base de données MongoDB établie avec succès»‘ dans
 
 ### 3. Schéma de base de données  
 
-Création du schéma de base de données en utilisant Mongoose.  
+Création du schéma de base de données en utilisant **Mongoose**.  
 
 Création des fichiers *exercise.model.js* et *user.model.js* dans un nouveau dossier "models".  
 
@@ -99,3 +99,59 @@ Les deux premières lignes chargent les routeurs à partir d'autres fichiers. En
 *Ajout de code commenté au fichier "users.js"*
 
 
+### 4. Test de l'API du serveur
+
+**Insomnia** ( outil alternatif : Postman )  
+
+‘sudo snap install insomnia‘  
+
+Insomnia nous permet de tester l'api du serveur comme par exemple :  
+
+1) -> créer une nouvelle *POST* request en utilisant du JSON.  
+
+exemple de requête :  
+
+‘{
+ "username": "Jerem"
+}‘  
+
+préciser le type de requếte *GET* ou *POST*, et bien préciser l'url /!\, ici :  
+
+‘http://localhost:5000/users/add‘  
+
+
+2) -> envoyer une *GET* request  
+
+pour récupérer une liste d'utilisateurs:  
+
+‘http://localhost:5000/users‘
+
+( Body : No Body )  
+
+**Remarque** : Pour l'ensemble des tests, le Server doit run et la connection avec la BDD doit être établie.  
+
+Dernière vérification : Sur le tableau de bord **MongoDB Atlas** ( collections ), l'utilisateur a bien été ajouté !  
+
+3) -> Ajouter des exercices *POST* ( toujours avec Insomnia ) sur :  
+
+‘http://localhost:5000/exercices/add‘  
+
+un exercice :  
+
+{ 
+"username": "Jerem", 
+"description": "bodybuilding", 
+"duration": 90, 
+"date": "2020-03-13T14:19:15.000Z" 
+}  
+
+puis un autre :  
+
+{
+ "username": "Jerem",
+ "description": "run",
+ "duration": 30,
+ "date": "2020-03-16T07:10:24.000Z"
+} 
+
+Vérifier en envoyant une *GET* request à ‘http://localhost:5000/exercices‘ , et/ou sur le tableau de bord MongoDB Atlas.
