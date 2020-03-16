@@ -29,7 +29,7 @@ mais il semblerait qu'il soit plus facile d'héberger la base de données à l'a
 - connecter l'application : chaîne de connection  
   
 
-### 2. Code
+### 2. Configuration initiale
 
 a)  
 - s'assurer que node.js est bien installé : `node -v`  
@@ -70,3 +70,32 @@ collez la chaîne uri dans le fichier ‘.env‘ après avoir écrit ‘ATLAS_UR
 remplacer <password> par le mot de passe configuré plus tôt.  
   
 Si ‘«Connexion à la base de données MongoDB établie avec succès»‘ dans le terminal , l'opération est un succès.
+  
+
+### 3. Schéma de base de données  
+
+Création du schéma de base de données en utilisant Mongoose.  
+
+Création des fichiers *exercise.model.js* et *user.model.js* dans un nouveau dossier "models".  
+
+#### Points de terminaison de l'API serveur ( Server API Endpoints )
+
+Ajout des routes de point de terminaison API afin que le serveur puisse être utilisé pour effecutuer des opérations CRUD.  
+
+Création dossier "routes". À l'intérieur, deux fichiers *exercices.js* ad *users.js*.  
+
+Pour informer le serveur que nous allons utiliser ces fichiers,  insérer dans "server.js" : 
+‘app.listen(port, function() {‘  
+‘const exercicesRouter = require ('./ routes / exercices'); 
+const usersRouter = require ('./ routes / users'); 
+
+app.use ('/ exercices', exercicesRouter); 
+app.use ('/ users', usersRouter);‘  
+
+Les deux premières lignes chargent les routeurs à partir d'autres fichiers. Ensuite, les routeurs sont ajoutés en tant que middleware.
+
+**Construction des fichiers de routeur**  
+
+*Ajout de code commenté au fichier "users.js"*
+
+
