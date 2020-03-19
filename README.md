@@ -52,7 +52,7 @@ Mongoose rend l'interaction avec MongoDB via Node.js plus simple.
     
       
 b)  
-- Créer le serveur principal : le fichier server.js  
+- Créer le serveur principal : le fichier "server.js"  
 
 - Créer un serveur Express, attacher cors et middleware express.json  
   
@@ -138,20 +138,49 @@ Dernière vérification : Sur le tableau de bord **MongoDB Atlas** ( collections
 
 un exercice :  
 
-`{ 
-"username": "Jerem", 
-"description": "bodybuilding", 
-"duration": 90, 
-"date": "2020-03-13T14:19:15.000Z" 
+`{  
+
+"username": "Jerem",  
+
+"description": "bodybuilding",  
+
+"duration": 90,  
+
+"date": "2020-03-13T14:19:15.000Z"  
+
 }`  
 
 puis un autre :  
 
-`{
- "username": "Jerem",
- "description": "run",
- "duration": 30,
- "date": "2020-03-16T07:10:24.000Z"
+`{  
+
+ "username": "Jerem",  
+
+ "description": "run",  
+
+ "duration": 30,  
+
+ "date": "2020-03-16T07:10:24.000Z"  
+ 
 }` 
 
-Vérifier en envoyant une *GET* request à `http://localhost:5000/exercices` , et/ou sur le tableau de bord MongoDB Atlas.
+Vérifier en envoyant une *GET* request à `http://localhost:5000/exercices` , et/ou sur le tableau de bord MongoDB Atlas.  
+
+- **Terminer les itinéraires** *cf: "exercices.js"* -  
+
+Puis les tester avec Insomnia:  
+
+a) Copier l'id d'un exercice et le coller à la fin de l'url, envoyer une requête GET.  
+
+L'exercice est retourné. Pour le supprimer, remplacer GET par DELETE er envoyer la requête.  
+
+b) Modifier. ( POST ) + JSON  
+
+Copier l'id à la fin de l'url après avoir ajouté /update/  
+
+
+
+
+
+
+

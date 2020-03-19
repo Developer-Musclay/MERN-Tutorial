@@ -18,10 +18,10 @@ connection.once ('open', () => {
   console.log ("Connexion à la base de données MongoDB établie avec succès"); 
 })
 
-const exercicesRouter = require ('./routes/exercices'); 
+const exercisesRouter = require ('./routes/exercises'); 
 const usersRouter = require ('./routes/users'); 
 
-app.use ('/exercices', exercicesRouter); 
+app.use ('/exercises', exercisesRouter); 
 app.use ('/users', usersRouter);
 
 app.listen(port, () => {
