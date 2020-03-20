@@ -170,8 +170,10 @@ Vérifier en envoyant une *GET* request à `http://localhost:5000/exercices` , e
 
 - **Terminer les itinéraires** *cf: "exercices.js"* -  
 
--ID GET
--ID DELETE
+-ID GET  
+
+-ID DELETE  
+
 -UPDATE ID POST  
 
 Puis les tester avec Insomnia:  
@@ -207,7 +209,7 @@ Ensuite créer ses component ( React on connais ), faire les routes dans App.js
  modifier Title dans index.html, etc...  
 
 
- ### Exercise Component  
+ ### Create Exercise Component  
 
  *cf "create-exercise.component.js* + coms  
 
@@ -215,7 +217,12 @@ Ensuite créer ses component ( React on connais ), faire les routes dans App.js
 
  `npm install react-datepicker`  
 
- 
+
+  ### Create User Component  
+
+  *cf "create-user.component.js*
+
+
 
 
 
