@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 export default class CreateUser extends Component {
 
@@ -23,6 +24,14 @@ export default class CreateUser extends Component {
       username: this.state.username,
     };
     console.log(newUser);
+
+    /* la méthode 'axios.post' envoie une requête HTTP POST
+    au backend endpoint( cf url ). Ce endpoint attend un objet 
+    JSON dans le corps de la requête*/ 
+    // Nous passons donc l'objet 'newUser' comme deuxième argument
+
+    axios.post('http://localhost:5000/users/add', newUser)
+      .then(res => console.log(res.data));
     
     this.setState({
       username: ''

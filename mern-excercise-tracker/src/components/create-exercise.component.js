@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -21,13 +22,27 @@ export default class CreateExercise extends Component {
     }
   }
 
-  // crée un utilisateur 'test'
-  // en attendant la liste des utilisateurs provenant de la bdd
+  /* 1- crée un utilisateur 'test'
+   en attendant la liste des utilisateurs provenant de la bdd */
+   /* 2- maj de la méthode :
+   Nous obtiendrons la liste des utilisateurs de la bdd */
   componentDidMount() {
-    this.setState({ 
-      users: ['test user'],
-      username: 'test user'
-    });
+    //this.setState({ 
+      // users: ['test user'],
+      // username: 'test user'
+      axios.get('http://localhost:5000/users/')
+        .then(response => {
+          if (response.data.length > 0) {
+            this.setState({ 
+              users: response.data.map(user => user.username),
+              username: response.data[0].username
+            });
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+    //});
   }
 
   // mise à jour des propriétés du State
@@ -68,6 +83,10 @@ export default class CreateExercise extends Component {
     };
   
     console.log(exercise);
+
+    // même méthode que dans 'create-user.component.js'
+    axios.post('http://localhost:5000/exercises/add', exercise)
+      .then(res => console.log(res.data));
     
     // une fois le formulaire envoyé,
     // l'utilisateur est redirigé vers la page d'accueil

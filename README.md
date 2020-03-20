@@ -10,7 +10,7 @@ La stack MERN comprend les technologies suivantes:
 
 **Express** : un framework d'application Web pour Node.js.  
 
-**React** : une bibliothèque front-end JavaScript pour créer des interfaces utilisateur.  
+**React** : une librairie front-end JavaScript pour créer des interfaces utilisateur.  
 
 **Node.js** : environnement d'exécution JavaScript qui exécute du code JavaScript en dehors d'un navigateur (tel qu'un serveur).  
 
@@ -221,6 +221,20 @@ Ensuite créer ses component ( React on connais ), faire les routes dans App.js
   ### Create User Component  
 
   *cf "create-user.component.js*
+
+
+
+## III - Connecter FRONT et BACK  
+
+Nous allons utiliser la librairie **Axios** pour que notre Front-end puisse envoyer des requêtes HTTP à notre Back-end :  
+
+`npm install axios`  
+
+Nous devons terminer l'implémentation du component CreateUser et envoyer des données au backend.  
+
+*cf "create-user.component.js*  
+
+Ainsi que du component CreateExercise
 
 
 
