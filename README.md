@@ -15,6 +15,8 @@ La stack MERN comprend les technologies suivantes:
 **Node.js** : environnement d'exécution JavaScript qui exécute du code JavaScript en dehors d'un navigateur (tel qu'un serveur).  
 
 
+## I - BACK-END  
+
 ### 1. MongoDB Atlas
 
 Il est possible d'héberger une base de données MongoDB localement, 
@@ -168,6 +170,10 @@ Vérifier en envoyant une *GET* request à `http://localhost:5000/exercices` , e
 
 - **Terminer les itinéraires** *cf: "exercices.js"* -  
 
+-ID GET
+-ID DELETE
+-UPDATE ID POST  
+
 Puis les tester avec Insomnia:  
 
 a) Copier l'id d'un exercice et le coller à la fin de l'url, envoyer une requête GET.  
@@ -177,6 +183,40 @@ L'exercice est retourné. Pour le supprimer, remplacer GET par DELETE er envoyer
 b) Modifier. ( POST ) + JSON  
 
 Copier l'id à la fin de l'url après avoir ajouté /update/  
+  
+    
+## II - FRONT-END  
+
+### React-App : Initialisation 
+
+`npm start` pour executer le serveur de dev  
+
+`npm install bootstrap` pour ajouter le framework CSS **Bootstrap**
+
+puis ajouter dans App.js la ligne suivante:  
+
+`import “bootstrap/dist/css/bootstrap.min.css”;`  
+
+Importer React Router (ajouter dans App.js):  
+
+`import { BrowserRouter as Router, Route } from “react-router-dom”;`  
+et taper `npm install react-router-dom`  
+
+Ensuite créer ses component ( React on connais ), faire les routes dans App.js
+ et éventuellement supprimer fichiers et code inutiles provenant du 'react-modele', 
+ modifier Title dans index.html, etc...  
+
+
+ ### Exercise Component  
+
+ *cf "create-exercise.component.js* + coms  
+
+ installation du package pour DatePicker :  
+
+ `npm install react-datepicker`  
+
+ 
+
 
 
 
