@@ -230,15 +230,15 @@ Nous allons utiliser la librairie **Axios** pour que notre Front-end puisse envo
 
 `npm install axios`  
 
-Nous devons terminer l'implémentation du component CreateUser et envoyer des données au backend.  
+1) Nous devons terminer l'implémentation du component CreateUser et envoyer des données au backend.  
 
 *cf "create-user.component.js*  
 
-Ainsi que du component CreateExercise  
+2) Ainsi que du component CreateExercise  
 
 *cf "create-exercise.component.js*  
 
-Et le component exercises-list  
+3) Et le component exercises-list  
 
 *cf "exercises-list.component.js*  
 
@@ -246,9 +246,13 @@ Et le component exercises-list
 L'élément clé qui rend ce type de composant différent d'un composant de classe est le manque de méthodes liées au State. 
 Si tout ce que j'ai à faire est d'accepter les Props et de renvoyer du JSX, j'utilise un composant fonctionnel au lieu d'un composant de classe. *cf 'const Exercice*  
 
+4) Enfin, implémenter le composant 'EditExercise'  
+
+Il est très similaire au composant 'CreateExercise', les principales différences sont les méthodes 'componentDidMount et 'onSubmit'
 
 
 
+## Vive la stack MERN !
 
 
 
