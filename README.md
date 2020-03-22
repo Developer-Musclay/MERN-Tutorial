@@ -234,7 +234,18 @@ Nous devons terminer l'implémentation du component CreateUser et envoyer des do
 
 *cf "create-user.component.js*  
 
-Ainsi que du component CreateExercise
+Ainsi que du component CreateExercise  
+
+*cf "create-exercise.component.js*  
+
+Et le component exercises-list  
+
+*cf "exercises-list.component.js*  
+
+*précision :* Le composant 'Exercise' est implémenté en tant que composant React fonctionnel (functional React component). 
+L'élément clé qui rend ce type de composant différent d'un composant de classe est le manque de méthodes liées au State. 
+Si tout ce que j'ai à faire est d'accepter les Props et de renvoyer du JSX, j'utilise un composant fonctionnel au lieu d'un composant de classe. *cf 'const Exercice*  
+
 
 
 
